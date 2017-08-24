@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Spanish Exploration in the Sixteenth Century</title>
+<link rel="shortcut icon" href="/favicon.ico">
+<link href="css/map.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+<!--this is the code for the sliding callout panels-->
+<!--need to determine how to get an open slider to close when next one is opened-->
+<script type="text/javascript">
+	var o = false;
+	var b = false;
+	var p = false;
+	var g = false;
+	var r = false;
+	$(document).ready(function(){
+	    $(".triggerblue").click(function(){
+	        $(".panel_01").toggle("fast");
+	        $(".panel_02").hide("fast");
+	        $(".panel_03").hide("fast");
+	        $(".panel_04").hide("fast");
+	        $(".panel_05").hide("fast");
+        	//$(this).toggleClass("active");
+        	if (b == false){
+        		$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_close.png)'})
+        		b = true;
+				o = false;
+				p = false;
+				g = false;
+				r = false;
+        	}else{
+        		$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_open.png)'})
+        		b = false;
+        	}
+        	$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_open.png)'})
+        	$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_open.png)'})
+        	$(".triggerred").css({'background-image': 'url(images/spex/btn_red_open.png)'})
+        	$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_open.png)'})
+	        return false;
+		});
+	});
+	$(document).ready(function(){
+	    $(".triggerpurple").click(function(){
+	        $(".panel_02").toggle("fast");
+	        $(".panel_01").hide("fast");
+	        $(".panel_03").hide("fast");
+	        $(".panel_04").hide("fast");
+	        $(".panel_05").hide("fast");
+        	//$(this).toggleClass("active");
+         	if (p == false){
+        		$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_close.png)'})
+        		p = true;
+				o = false;
+				b = false;
+				g = false;
+				r = false;
+        	}else{
+        		$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_open.png)'})
+        		p = false;
+        	}
+        	$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_open.png)'})
+        	$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_open.png)'})
+        	$(".triggerred").css({'background-image': 'url(images/spex/btn_red_open.png)'})
+        	$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_open.png)'})
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggergreen").click(function(){
+	        $(".panel_03").toggle("fast");
+	        $(".panel_01").hide("fast");
+	        $(".panel_02").hide("fast");
+	        $(".panel_04").hide("fast");
+	        $(".panel_05").hide("fast");
+        	//$(this).toggleClass("active");
+        	if (g == false){
+        		$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_close.png)'})
+        		g = true;
+				o = false;
+				p = false;
+				b = false;
+				r = false;
+        	}else{
+        		$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_open.png)'})
+        		g = false;
+        	}
+        	$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_open.png)'})
+        	$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_open.png)'})
+        	$(".triggerred").css({'background-image': 'url(images/spex/btn_red_open.png)'})
+        	$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_open.png)'})
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggerred").click(function(){
+	        $(".panel_04").toggle("fast");
+	        $(".panel_01").hide("fast");
+			$(".panel_02").hide("fast");
+			$(".panel_03").hide("fast");
+	        $(".panel_05").hide("fast");
+        	//$(this).toggleClass("active");
+        	if (r == false){
+        		$(".triggerred").css({'background-image': 'url(images/spex/btn_red_close.png)'})
+        		r = true;
+				o = false;
+				p = false;
+				g = false;
+				b = false;
+        	}else{
+        		$(".triggerred").css({'background-image': 'url(images/spex/btn_red_open.png)'})
+        		r = false;
+        	}
+        	$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_open.png)'})
+        	$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_open.png)'})
+        	$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_open.png)'})
+        	$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_open.png)'})
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggerorange").click(function(){
+	        $(".panel_05").toggle("fast");
+	        $(".panel_01").hide("fast");
+	        $(".panel_02").hide("fast");
+	        $(".panel_03").hide("fast");
+	        $(".panel_04").hide("fast");
+        	//$(this).toggleClass("active");
+        	if (o == false){
+        		$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_close.png)'})
+        		o = true;
+				b = false;
+				p = false;
+				g = false;
+				r = false;
+        	}else{
+        		$(".triggerorange").css({'background-image': 'url(images/spex/btn_orange_open.png)'})
+        		o = false;
+        	}
+         	$(".triggerpurple").css({'background-image': 'url(images/spex/btn_purple_open.png)'})
+        	$(".triggergreen").css({'background-image': 'url(images/spex/btn_green_open.png)'})
+        	$(".triggerred").css({'background-image': 'url(images/spex/btn_red_open.png)'})
+        	$(".triggerblue").css({'background-image': 'url(images/spex/btn_blue_open.png)'})
+	        return false;
+	    });
+	});
+
+</script>
+
+<!--raphael.js library is needed for animating routes-->
+<script src="./Spanish_Exploration_Map/raphael.js" type="text/javascript" charset="utf-8"></script>
+<!--script to toggle the spanish claimed lands map when btn in legend is clicked-->
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $(".triggerALL").click(function(){
+	        playAnimation("ALL");
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggerlands").click(function(){
+	        $("#claimedMap").toggle("slow");
+        	$(this).toggleClass("active");
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggerdesoto").click(function(){
+	        playAnimation("green");
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggerponce").click(function(){
+	        playAnimation("blue");
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggercabeza").click(function(){
+	        playAnimation("purple");;
+	        return false;
+	    });
+	});
+	$(document).ready(function(){
+	    $(".triggercabrillo").click(function(){
+	        playAnimation("red");
+	        return false;
+	    });
+	});
+	oceanB = new Audio('audio/ocean.wav');
+	oceanB.loop = true; 
+	oceanR = new Audio('audio/ocean.wav');
+	oceanR.loop = true; 	
+	oceanG = new Audio('audio/ocean.wav');
+	oceanG.loop = true; 
+	horseG = new Audio('audio/horse_gallop.wav');
+	horseG.loop = true;
+	oceanP = new Audio('audio/ocean.wav');
+	oceanP.loop = true; 
+	horseP = new Audio('audio/horse_gallop.wav');
+	horseP.loop = true;
+	var playEmALL = "False"
+	var playNext = "NULL"
+	
+	function playAnimation(color){
+		switch(color){
+			case "ALL":
+				playEmALL = "True"
+				playNext = "Blue"
+				playALL();
+				break;
+			case "green":
+				playEmALL = "False"
+				var playNext = "NULL"
+				playGreen();
+				break;
+			case "blue":
+				playEmALL = "False"
+				playNext = "NULL"
+				playBlue();
+				break;
+			case "purple":
+				playEmALL = "False"
+				playNext = "NULL"
+				playPurple();
+				break;
+			case "red":
+				playEmALL = "False"
+				playNext = "NULL"
+				playRed();
+				break;
+			default:
+				alert("default called");
+		}
+		function clearALL(){
+			$("#holderBlue").empty();
+			$("#holderBlue2").empty();
+			$("#holderGreen").empty();
+			$("#holderGreen2").empty();
+			$("#holderGreenX").empty();
+			$("#holderGreenX2").empty();
+			$("#holderPurple").empty();
+			$("#holderPurple2").empty();
+			$("#holderPurpleX").empty();
+			$("#holderPurpleX2").empty();
+			$("#holderRed").empty();
+			$("#holderRed2").empty();
+		}
+		function playALL(){
+		    //oceanG.pause();
+			//oceanP.pause();
+			//oceanB.pause();
+			//oceanR.pause();
+			//horseG.pause();
+			//horseP.pause();
+			clearALL();
+			//playRed();
+			//playOrange();
+			playBlue();
+		}
+		function playGreen(){
+		/////////////////////////
+			//horseG.pause();
+			oceanG.play();
+			
+			//var Green_src = document.getElementById("bee").src;
+            $("#holderGreen").empty();
+			$("#holderGreen2").empty();
+			$("#holderGreenX").empty();
+			$("#holderGreenX2").empty();
+			var GreenOldX = 0
+			var GreenOldY = 0
+			var GreenNewX = 0
+			var GreenNewY = 0
+            var Green_rB = Raphael("holderGreen", 875, 670);
+			var Green_rB2 = Raphael("holderGreen2", 875, 670);
+			var Green_rz = Green_rB
+			
+			//
+			var Green_rz2 = Green_rB2,
+			//Green
+			Green_pz = Green_rz.path("M545.27,287.02c-1.11-8.52-3.81-25.2-4.39-28.69c-0.44-2.62-1.57-8.91-6.12-16.9c0,0-7.74-10.43-6.91-15.93").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    Green_lenz = Green_pz.getTotalLength(),
+		    Green_ez2 = Green_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var Green_segment1z = Green_pz.getSubpath(0,(this.attr("transform")[1][2])*(Green_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					Green_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var Green_sp1z = Green_rz2.path(Green_segment1z).attr({stroke: "#00A651", "stroke-width":"2"});
+		    });
+			Green_ez = Green_rz.image("ships.png", -24, -10.5, 48, 21).onAnimation(function () {
+			//Green_ez = Green_rz.ellipse(0, 0, 7, 3).attr({stroke: "none", fill: "#0c5cca"}).onAnimation(function () {
+			
+			});
+		
+		    Green_rz.customAttributes.Green_alongz = function (v) {
+		        var Green_pointz = Green_pz.getPointAtLength(v * Green_lenz);
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					oceanG.pause();
+					playGreenX();
+				}
+				GreenOldX = GreenNewX;
+				GreenOldY = GreenNewY;
+				GreenNewX = Green_pointz.x;
+				GreenNewY = Green_pointz.y;
+				//
+				if (((GreenOldX - Green_pointz.x) < 0)&&((GreenOldY - Green_pointz.y) > 0)){
+					//Green_ez.rotate(90);
+					//alert(Green_pointz.alpha);
+					return {
+						transform: "t" + [Green_pointz.x, Green_pointz.y] + "r" + (Green_pointz.alpha + 180)
+					};
+				}else{
+					
+					return {
+						transform: "t" + [Green_pointz.x, Green_pointz.y] + "r" + Green_pointz.alpha
+					};
+				}
+				//alert(Green_pointz.alpha);
+		    };
+			Green_rz2.customAttributes.Green_alongz2 = function (v2) {
+		        var Green_pointz2 = Green_pz.getPointAtLength(v2 * Green_lenz);
+				return {
+		            transform: "t" + [Green_pointz2.x, Green_pointz2.y] + "r" + Green_pointz2.alpha + v2
+		        };
+		    };
+		    Green_ez.attr({Green_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runGreen() {
+				Green_ez.animate({Green_alongz: 1}, 5e3, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			Green_ez2.attr({Green_alongz2: 0});  // A value of 1 will reverse the animation
+			function runGreen2() {
+				Green_ez2.animate({Green_alongz2: 1}, 5e3, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runGreen();
+			runGreen2();
+		}
+		/////////////////////////
+		function playGreenX(){
+		/////////////////////////
+			oceanG.pause();
+			horseG.play();
+			var GreenXOldX = 0
+			var GreenXOldY = 0
+			var GreenXNewX = 0
+			var GreenXNewY = 0
+			//var GreenX_src = document.getElementById("bee").src;
+            $("#holderGreenX").empty();
+			$("#holderGreenX2").empty();
+            var GreenX_rB = Raphael("holderGreenX", 875, 670);
+			var GreenX_rB2 = Raphael("holderGreenX2", 875, 670);
+			var GreenX_rz = GreenX_rB
+			//
+			var GreenX_rz2 = GreenX_rB2,
+			//GreenX
+			GreenX_pz = GreenX_rz.path("M527.85,225.5c0,0,4.42-13.46,2.76-17.86c-1.66-4.39-3.87-9.34-4.15-12.36c-0.28-3.02-3.04-5.22-6.91-6.04c-3.87-0.82-14.38,1.38-16.32,0.83c-1.93-0.55-1.1-5.22-1.93-7.42c-0.83-2.2-5.25-10.16-2.77-14.28c2.49-4.12,3.87-7.41,6.08-13.18c2.21-5.77,1.38-10.16,2.76-13.18c1.39-3.02,3.32-4.67,11.06-7.42c6.77-2.4,15.22-5.85,20.94-7.41c0,0,4.5-3.85,0.63-6.59c-3.88-2.75-11.33-0.55-14.1-2.75c-2.76-2.2-8.57-7.14-11.61-6.86c-3.04,0.28-11.61-1.65-13.27-1.65c-1.66,0-9.12-0.55-14.1,4.12c-4.98,4.67-4.98,9.61-3.6,13.46c1.39,3.85,4.43,10.44,1.11,11.81c-3.32,1.37-9.4,3.84-10.23,8.24c-0.83,4.39-1.1,21.15-4.98,22.25c-3.87,1.1-10.4-0.41-12.71-2.2c-1.73-1.34-4-2.1-5.6-3.58c-0.58-0.54-0.98-1.17-1.66-1.62c-1.07-0.7-2.26-1.14-3.26-1.98c-2.23-1.89-4.09-4.07-5.99-6.24c-1.33-1.52-2.93-3.28-3.24-5.31c-0.23-1.43-0.1-2.83-0.15-4.26c-0.11-3.33-3.65-5.68-6.59-6.52c-0.24-0.07-0.49-0.13-0.74-0.16c-0.69-0.11-1.23-0.18-1.88-0.41c-0.99-0.36-1.66-0.45-2.67-0.47c-1.27-0.02-2.53-0.42-3.82-0.43c-1.77-0.03-3.6,0.56-5.36,0.28c-1.79-0.29-4.71-1.71-4.75-3.79c-0.03-1.71,0.91-3.73,1.28-5.39c0.25-1.11,0.97-3.05,0.62-4.2c-0.35-1.14-1.11,0.07-1.53,0.68c-3.04,4.4-7.19,8.79-8.85,5.22c-1.66-3.57-6.08-0.82-10.51,0.55c-4.42,1.38-4.15,3.3-11.33,1.1c-7.19-2.2-15.48,1.64-7.19,4.94c1.84,0.73,3.01-0.12,8.3,5.14c5.29,5.25,14.59,18.31,19.07,28.19").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    GreenX_lenz = GreenX_pz.getTotalLength(),
+		    GreenX_ez2 = GreenX_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var GreenX_segment1z = GreenX_pz.getSubpath(0,(this.attr("transform")[1][2])*(GreenX_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					GreenX_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var GreenX_sp1z = GreenX_rz2.path(GreenX_segment1z).attr({stroke: "#00A651", "stroke-width":"2"});
+		    });
+			GreenX_ez = GreenX_rz.image("horse.png", -26, -7, 52, 14).onAnimation(function () {
+			//GreenX_ez = GreenX_rz.ellipse(0, 0, 7, 3).attr({stroke: "none", fill: "#0c5cca"}).onAnimation(function () {
+			
+			});
+
+		    GreenX_rz.customAttributes.GreenX_alongz = function (v) {
+		        var GreenX_pointz = GreenX_pz.getPointAtLength(v * GreenX_lenz);
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					horseG.pause();
+					if ((playEmALL == "True")&& (playNext == "Green")){
+						playNext = "Red"
+						clearALL();
+						playRed();
+					}
+				}
+				GreenXOldX = GreenXNewX;
+				GreenXOldY = GreenXNewY;
+				GreenXNewX = GreenX_pointz.x;
+				GreenXNewY = GreenX_pointz.y;
+				//
+				if (((GreenXOldX - GreenX_pointz.x) < 0)&&((GreenXOldY - GreenX_pointz.y) > 0)){
+					//Green_ez.rotate(90);
+					//alert(Green_pointz.alpha);
+					return {
+						transform: "t" + [GreenX_pointz.x, GreenX_pointz.y] + "r" + (GreenX_pointz.alpha + 180)
+					};
+				}else{
+					
+					return {
+						transform: "t" + [GreenX_pointz.x, GreenX_pointz.y] + "r" + GreenX_pointz.alpha
+					};
+				}
+		    };
+			GreenX_rz2.customAttributes.GreenX_alongz2 = function (v2) {
+		        var GreenX_pointz2 = GreenX_pz.getPointAtLength(v2 * GreenX_lenz);
+				return {
+		            transform: "t" + [GreenX_pointz2.x, GreenX_pointz2.y] + "r" + GreenX_pointz2.alpha + v2
+		        };
+		    };
+		    GreenX_ez.attr({GreenX_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runGreenX() {
+				GreenX_ez.animate({GreenX_alongz: 1}, 2e4, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			GreenX_ez2.attr({GreenX_alongz2: 0});  // A value of 1 will reverse the animation
+			function runGreenX2() {
+				GreenX_ez2.animate({GreenX_alongz2: 1}, 2e4, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runGreenX();
+			runGreenX2();
+		/////////////////////////
+		}
+		function playBlue(){
+		/////////////////////////
+			//oceanB.pause();
+			oceanB.play();
+			//var Blue_src = document.getElementById("bee").src;
+            $("#holderBlue").empty();
+			$("#holderBlue2").empty();
+            var Blue_rB = Raphael("holderBlue", 875, 670);
+			var Blue_rB2 = Raphael("holderBlue2", 875, 670);
+			var Blue_rz = Blue_rB
+			//
+			var Blue_rz2 = Blue_rB2,
+			//BLUE
+			Blue_pz = Blue_rz.path("M766.06,285.829c-5.308-7.912-10.363-29.14-37.572-23.204c-8.802,1.921-31.92,6.506-60.379-7.247c-24.548-11.869-53.081-37.576-67.685-42.848c-9.434-3.412-36.764-16.193-40.739-20.807c-3.979-4.613-22.692-11.229-14.729,1.292c7.962,12.526,29.629,41.073,21.662,52.94c-7.963,11.864-10.69,11.725-18.198,3.872c-7.514-7.852-18.989-26.093-22.97-32.026c-3.98-5.933-11.944-6.592-15.263-1.979c-3.313,4.616-5.304,17.798,1.99,30.982").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    Blue_lenz = Blue_pz.getTotalLength(),
+		    Blue_ez2 = Blue_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var Blue_segment1z = Blue_pz.getSubpath(0,(this.attr("transform")[1][2])*(Blue_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					Blue_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var Blue_sp1z = Blue_rz2.path(Blue_segment1z).attr({stroke: "#0c5cca", "stroke-width":"2"});
+		    });
+			Blue_ez = Blue_rz.image("ships.png", -24, -10.5, 48, 21).onAnimation(function () {
+			//Blue_ez = Blue_rz.ellipse(0, 0, 7, 3).attr({stroke: "none", fill: "#0c5cca"}).onAnimation(function () {
+			
+			});
+
+		    Blue_rz.customAttributes.Blue_alongz = function (v) {
+		        var Blue_pointz = Blue_pz.getPointAtLength(v * Blue_lenz);
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					oceanB.pause();
+					if ((playEmALL == "True")&& (playNext == "Blue")){
+						playNext = "Purple"
+						clearALL();
+						playPurple();
+					}
+				}
+				return {
+		            transform: "t" + [Blue_pointz.x, Blue_pointz.y] + "r" + Blue_pointz.alpha
+		        };
+		    };
+			Blue_rz2.customAttributes.Blue_alongz2 = function (v2) {
+		        var Blue_pointz2 = Blue_pz.getPointAtLength(v2 * Blue_lenz);
+				return {
+		            transform: "t" + [Blue_pointz2.x, Blue_pointz2.y] + "r" + Blue_pointz2.alpha + v2
+		        };
+		    };
+		    Blue_ez.attr({Blue_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runBlue() {
+				Blue_ez.animate({Blue_alongz: 1}, 2e4, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			Blue_ez2.attr({Blue_alongz2: 0});  // A value of 1 will reverse the animation
+			function runBlue2() {
+				Blue_ez2.animate({Blue_alongz2: 1}, 2e4, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runBlue();
+			runBlue2();
+		/////////////////////////
+		}
+		function playPurple(){
+		/////////////////////////
+			horseP.pause();
+			oceanP.play();
+			//var Purple_src2 = document.getElementById("beeP").src;
+            $("#holderPurple").empty();
+			$("#holderPurple2").empty();
+			$("#holderPurpleX").empty();
+			$("#holderPurpleX2").empty();
+            var Purple_rB = Raphael("holderPurple", 875, 670);
+			var Purple_rB2 = Raphael("holderPurple2", 875, 670);
+			var Purple_rz = Purple_rB
+			//
+			var Purple_rz2 = Purple_rB2,
+			//Purple
+			Purple_pz = Purple_rz.path("M527.66,214.51c-17.58-3.08-35.33-5.23-53.11-6.74c-4.62-0.39-16.83-3.9-21.13-1.94c-4.61,2.1-4.03,7.67-7.1,11.3c-9.28,10.95-35.74-0.55-46.39-1.77c-6.33-0.73-12.34,0.51-18.61,0.84c-2.82,0.15-5.6-0.1-8.37-0.35").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    Purple_lenz = Purple_pz.getTotalLength(),
+		    Purple_ez2 = Purple_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var Purple_segment1z = Purple_pz.getSubpath(0,(this.attr("transform")[1][2])*(Purple_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					Purple_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var Purple_sp1z = Purple_rz2.path(Purple_segment1z).attr({stroke: "#92278f", "stroke-width":"2"});
+		    });
+			Purple_ez = Purple_rz.image("ships.png", -24, -10.5, 48, 21).onAnimation(function () {
+
+			});
+
+		    Purple_rz.customAttributes.Purple_alongz = function (v) {
+		        var Purple_pointz = Purple_pz.getPointAtLength(v * Purple_lenz);
+				//Purple_rz.text(50, 50, (v));
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					oceanP.pause();
+					playPurpleX();
+				}
+				return {
+		            transform: "t" + [Purple_pointz.x, Purple_pointz.y] + "r" + Purple_pointz.alpha
+		        };
+		    };
+			Purple_rz2.customAttributes.Purple_alongz2 = function (v2) {
+		        var Purple_pointz2 = Purple_pz.getPointAtLength(v2 * Purple_lenz);
+				return {
+		            transform: "t" + [Purple_pointz2.x, Purple_pointz2.y] + "r" + Purple_pointz2.alpha + v2
+		        };
+		    };
+		    Purple_ez.attr({Purple_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runPurple() {
+				Purple_ez.animate({Purple_alongz: 1}, 1e4, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			Purple_ez2.attr({Purple_alongz2: 0});  // A value of 1 will reverse the animation
+			function runPurple2() {
+				Purple_ez2.animate({Purple_alongz2: 1}, 1e4, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runPurple();
+			runPurple2();
+		/////////////////////////
+		}
+		function playPurpleX(){
+		/////////////////////////
+			oceanP.pause();
+			horseP.play();
+			//var PurpleX_src = document.getElementById("beePP").src;
+            $("#holderPurpleX").empty();
+			$("#holderPurpleX2").empty();
+            var PurpleX_rB = Raphael("holderPurpleX", 875, 670);
+			var PurpleX_rB2 = Raphael("holderPurpleX2", 875, 670);
+			var PurpleX_rz = PurpleX_rB
+			//
+			var PurpleX_rz2 = PurpleX_rB2,
+			//PurpleX
+			PurpleX_pz = PurpleX_rz.path("M372.95,215.85c-3.13-0.29-6.24-0.58-9.4-0.31c-9.82,0.84-19.22,4.81-29.24,2.97c-18.92-3.47-48.25-10.87-54.22-7.91c-5.97,2.97-14.43,10.38-19.41,4.45c-4.98-5.94-14.93-20.27-19.91-24.72s-10.45-11.86-23.39-11.37c-12.94,0.5-16.92-0.99-26.37-3.46c-9.46-2.47-24.38,8.4-23.89,20.76c0.5,12.36-0.5,33.12,18.42,51.91c0,0,43.48,41.52,68.7,52.83c25.23,11.32,58.2,29.5,61.03,41.23").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    PurpleX_lenz = PurpleX_pz.getTotalLength(),
+		    PurpleX_ez2 = PurpleX_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var PurpleX_segment1z = PurpleX_pz.getSubpath(0,(this.attr("transform")[1][2])*(PurpleX_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					PurpleX_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var PurpleX_sp1z = PurpleX_rz2.path(PurpleX_segment1z).attr({stroke: "#92278f", "stroke-width":"2"});
+		    });
+			PurpleX_ez = PurpleX_rz.image("horse.png", -26, -7, 52, 14).onAnimation(function () {
+
+			});
+
+		    PurpleX_rz.customAttributes.PurpleX_alongz = function (v) {
+		        var PurpleX_pointz = PurpleX_pz.getPointAtLength(v * PurpleX_lenz);
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					horseP.pause();
+					if ((playEmALL == "True")&& (playNext == "Purple")){
+						playNext = "Green"
+						clearALL();
+						playGreen();
+					}
+				}
+				return {
+		            transform: "t" + [PurpleX_pointz.x, PurpleX_pointz.y] + "r" + PurpleX_pointz.alpha
+		        };
+		    };
+			PurpleX_rz2.customAttributes.PurpleX_alongz2 = function (v2) {
+		        var PurpleX_pointz2 = PurpleX_pz.getPointAtLength(v2 * PurpleX_lenz);
+				return {
+		            transform: "t" + [PurpleX_pointz2.x, PurpleX_pointz2.y] + "r" + PurpleX_pointz2.alpha + v2
+		        };
+		    };
+		    PurpleX_ez.attr({PurpleX_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runPurpleX() {
+				//alert("I am an alert box!");
+				PurpleX_ez.animate({PurpleX_alongz: 1}, 2e4, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			PurpleX_ez2.attr({PurpleX_alongz2: 0});  // A value of 1 will reverse the animation
+			function runPurpleX2() {
+				PurpleX_ez2.animate({PurpleX_alongz2: 1}, 2e4, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runPurpleX();
+			runPurpleX2();
+		/////////////////////////
+		}
+		function playRed(){
+		/////////////////////////
+			//oceanR.pause();
+			oceanR.play();
+			var RedOldX = 0
+			var RedOldY = 0
+			var RedNewX = 0
+			var RedNewY = 0
+			//var Red_src = document.getElementById("beeR").src;
+            $("#holderRed").empty();
+			$("#holderRed2").empty();
+            var Red_rB = Raphael("holderRed", 875, 670);
+			var Red_rB2 = Raphael("holderRed2", 875, 670);
+			var Red_rz = Red_rB
+			//
+			var Red_rz2 = Red_rB2,
+			//Red
+			Red_pz = Red_rz.path("M306.817,391.484c-36.579-0.53-146.149-79.157-178.698-136.554c-32.551-57.396-16.3-68.779-21.524-91.87c-5.224-23.088-18.81-30.466-25.904-34.778c0,0-12.789-13.205-16.856-22.095c-4.07-8.895-9.067-19.71-9.324-33.146").attr({stroke: "#666", opacity: 0, "stroke-width": 1}),
+			//overz = rz.path().attr({stroke: "#f91"}),
+		    Red_lenz = Red_pz.getTotalLength(),
+		    Red_ez2 = Red_rz2.ellipse(0, 0, 0, 0).attr({stroke: "none", fill: "none"}).onAnimation(function () {
+				var Red_segment1z = Red_pz.getSubpath(0,(this.attr("transform")[1][2])*(Red_pz.getTotalLength()));
+				if ((this.attr("transform")[1][2]) < 1){
+					Red_rz2.clear();
+					//rz2.text(50, 50, (this.attr("transform")[1][2]));
+				}
+				var Red_sp1z = Red_rz2.path(Red_segment1z).attr({stroke: "#df3333", "stroke-width":"2"});
+		    });
+			Red_ez = Red_rz.image("ships.png", -24, -10.5, 48, 21).onAnimation(function () {
+			//Red_ez = Red_rz.ellipse(0, 0, 7, 3).attr({stroke: "none", fill: "#0c5cca"}).onAnimation(function () {
+			
+			});
+
+		    Red_rz.customAttributes.Red_alongz = function (v) {
+		        var Red_pointz = Red_pz.getPointAtLength(v * Red_lenz);
+				if ((v) > 0.99){
+					//Purple_rz.text(50, 50, (v));
+					oceanR.pause();
+					if ((playEmALL == "True")&& (playNext == "Red")){
+						playNext = "Orange"
+						clearALL();
+						playOrange();
+					}
+				}				
+				RedOldX = RedNewX;
+				RedOldY = RedNewY;
+				RedNewX = Red_pointz.x;
+				RedNewY = Red_pointz.y;
+				//
+				if (((RedOldX - Red_pointz.x) < 0)&&((RedOldY - Red_pointz.y) > 0)){
+					//Green_ez.rotate(90);
+					//alert(Green_pointz.alpha);
+					return {
+						transform: "t" + [Red_pointz.x, Red_pointz.y] + "r" + (Red_pointz.alpha + 180)
+					};
+				}else{
+					
+					return {
+						transform: "t" + [Red_pointz.x, Red_pointz.y] + "r" + Red_pointz.alpha
+					};
+				}
+		    };
+			Red_rz2.customAttributes.Red_alongz2 = function (v2) {
+		        var Red_pointz2 = Red_pz.getPointAtLength(v2 * Red_lenz);
+				return {
+		            transform: "t" + [Red_pointz2.x, Red_pointz2.y] + "r" + Red_pointz2.alpha + v2
+		        };
+		    };
+		    Red_ez.attr({Red_alongz: 0});  // A value of 1 will reverse the animation
+		    var rotateAlongThePath = true;
+			function runRed() {
+				Red_ez.animate({Red_alongz: 1}, 2e4, function () {
+					//ez.attr({alongz: 0});
+				});
+			}
+			Red_ez2.attr({Red_alongz2: 0});  // A value of 1 will reverse the animation
+			function runRed2() {
+				Red_ez2.animate({Red_alongz2: 1}, 2e4, function () {
+					//ez2.attr({alongz2: 0});
+				});
+			}
+			runRed();
+			runRed2();
+		/////////////////////////
+		}
+		function playOrange(){
+		    //alert( " Code Orange ");
+			$("#claimedMap").toggle("slow");
+        	$(this).toggleClass("active");
+		}
+	}
+</script>
+<!--DELETE!! scripts below can be deleted ... they are for testing purposes only-->
+<!--<script src="./Spanish_Exploration_Map/raphael.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="SEM.js"></script>-->
+
+
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+
+<!--wrapper holds all page content except the footer-->
+<div id="wrapper">
+
+<!--header holds h1 that names the page and creates the map nameplate-->
+<header>
+<hgroup>
+<h1>Spanish Exploration</h1>
+<h2>in the Sixteenth Century</h2>
+</hgroup>
+</header><!--closes header div-->
+
+<!--section.map contains legend, callouts and interactive canvas area(s)-->
+<section id="baseMap">
+<h1>Spanish Exploration Interactive Map</h1>
+
+<div id="claimedMap"></div>
+<div id="holderBlue"></div>
+<div id="holderGreen"></div>
+<div id="holderGreenX"></div>
+<div id="holderPurple"></div>
+<div id="holderPurpleX"></div>
+<div id="holderRed"></div>
+<div id="holderGreenX2"><img id="beeGG" src="horse.png" width="0" height="0" alt="BeeGG"></div>
+<div id="holderPurpleX2"><img id="beePP" src="horse.png" width="0" height="0" alt="BeePP"></div>
+<div id="holderPurple2"><img id="beeP" src="ships.png" width="0" height="0" alt="BeeP"></div>
+<div id="holderBlue2"><img id="bee" src="ships.png" width="0" height="0" alt="Bee"></div>
+<div id="holderRed2"><img id="beeR" src="ships.png" width="0" height="0" alt="BeeR"></div>
+<div id="holderGreen2"><img id="beeG" src="horse.png" width="0" height="0" alt="BeeG"></div>
+
+
+
+<!--aside.legend holds the list (formatted inside a table) that will trigger map interactivity-->
+<aside class="legend">
+<h3>Routes of Exploration</h3>
+
+<!--"plus" round buttons-->
+<a class="triggerblue" href="#"></a><!--round blue button that triggers callout for ponce-->
+<a class="triggerpurple" href="#"></a><!--round purple button that triggers callout for cabeza-->
+<a class="triggergreen" href="#"></a><!--round green button that triggers callout for desoto-->
+<a class="triggerred" href="#"></a><!--round red button that triggers callout for cabrillo-->
+<a class="triggerorange" href="#"></a><!--round orange button that triggers callout for claimed lands-->
+
+<!--toggles ponce route on and off-->
+<a class="triggerponce" href="#">
+<table>
+<tr>
+<td class="explorer"><p>Ponce de León</p></td>
+<td class="year"><p>1513</p></td>
+</tr>
+</table>
+</a>
+
+<!--toggles cabeza route on and off-->
+<a class="triggercabeza" href="#">
+<table>
+<tr>
+<td class="explorer"><p>Cabeza de Vaca</p></td>
+<td class="year"><p>1529&ndash;1536</p></td>
+</tr>
+</table>
+</a>
+
+<!--toggles desoto route on and off-->
+<a class="triggerdesoto" href="#">
+<table>
+<tr>
+<td class="explorer"><p>De Soto</p></td>
+<td class="year"><p>1539&ndash;1542</p></td>
+</tr>
+</table>
+</a>
+
+<!--toggles cabrillo route on and off-->
+<a class="triggercabrillo" href="#">
+<table>
+<tr>
+<td class="explorer"><p>Cabrillo</p></td>
+<td class="year"><p>1542</p></td>
+</tr>
+</table>
+</a>
+
+<!--toggles the map showing the claimed lands on and off-->
+<a class="triggerlands" href="#">
+<table>
+<tr>
+<td class="wide"><p>Lands Claimed by Spain</p></td>
+</tr>
+</table>
+</a>
+
+<!--toggles the map showing the claimed lands on and off-->
+<a class="triggerALL" href="#">
+<table>
+<tr>
+<td class="wide"><p>Play All</p></td>
+</tr>
+</table>
+</a>
+
+</aside><!--closes legend-->
+
+<!--panels (sliders) hold the explorer specific callout text-->
+<aside class="panel_01">
+<h3>Ponce de León</h3><!--invisible header used for proper html5 indexing-->
+<h4>Callout</h4><!--invisible header used for proper html5 indexing-->
+<p>Ponce de León was the first European to step foot in Florida. He also established the oldest European settlement in Puerto Rico and discovered the Gulf Stream. His original quest was to find the legendary Fountain of Youth, but instead ended up reaching the east coast of Florida and claiming the peninsula for Spain.</p>
+</aside><!--closes .panel_01-->
+
+<aside class="panel_02">
+<h3>Cabeza de Vaca</h3><!--invisible header used for proper html5 indexing-->
+<h4>Callout</h4><!--invisible header used for proper html5 indexing-->
+<p>Cabeza de Vaca's expedition left Spain in 1527. After surviving a hurricane near Cuba, the expedition landed on the west coast of Florida near Tampa Bay in April of 1528, and claimed the land for Spain. De Vaca then sailed to Texas on a raft and walked from Texas to Mexico City, arriving there in 1536. In the end, only four men from the 250–300 person expedition survived, including de Vaca.</p>
+</aside><!--closes .panel_02-->
+
+<aside class="panel_03">
+<h3>De Soto</h3><!--invisible header used for proper html5 indexing-->
+<h4>Callout</h4><!--invisible header used for proper html5 indexing-->
+<p>De Soto was the first European to explore Florida and the southeastern U.S. De Soto and his crew of over 600 men spent four years searching for gold and silver and exploring the area. The group encountered many native ambushes and conflicts along the way. De Soto died during the explorations and was buried on the banks of the Mississippi River in late June, 1542.</p>
+</aside><!--closes .panel_03-->
+
+<aside class="panel_04">
+<h3>Cabrillo</h3><!--invisible header used for proper html5 indexing-->
+<h4>Callout</h4><!--invisible header used for proper html5 indexing-->
+<p>Cabrillo was the first European explorer of the Californian coast. In 1542, he sailed from Acapulco to southern California, claiming California for King Charles I of Spain. Cabrillo named San Diego Bay and Santa Barbara. He died on San Miguel Island after a fight with Native Americans, from complications resulting from a broken leg.</p>
+</aside><!--closes .panel_04-->
+
+<aside class="panel_05">
+<h3>Lands Claimed by the Spanish</h3><!--invisible header used for proper html5 indexing-->
+<h4>Callout</h4><!--invisible header used for proper html5 indexing-->
+<p>Lands Claimed by the Spanish, also known as New Spain and formally called the Viceroyalty of New Spain.</p>
+</aside><!--closes .panel_05-->
+
+</section><!--ends section#baseMap containing legend, callouts, interactive canvas area(s)-->
+</div><!--closes wrapper div-->
+
+<footer><p>&copy; 2015 Mapping Specialists</p>
+</footer>
+</body>
+</html>
